@@ -1,217 +1,60 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TheCreativshik's site</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #E0F7FA, #C8E6C9);
-            color: #333;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            overflow-x: hidden;
-        }
-
-        h1 {
-            font-size: 3.5em;
-            color: #2E7D32;
-            margin-top: 30px;
-            animation: fadeIn 2s ease-in-out, float 4s ease-in-out infinite;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        h2 {
-            font-size: 2.5em;
-            color: #388E3C;
-            margin-top: 20px;
-            animation: slideIn 1.5s ease-in-out;
-        }
-
-        h3, h4 {
-            color: #555;
-            animation: slideIn 1.5s ease-in-out;
-        }
-
-        .button-style {
-            display: inline-block;
-            padding: 15px 30px;
-            margin: 20px;
-            background: linear-gradient(135deg, #43A047, #2E7D32);
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            border: none;
-            border-radius: 30px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
-
-        .button-style:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
-            background: linear-gradient(135deg, #2E7D32, #43A047);
-        }
-
-        img {
-            border-radius: 20px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
-        }
-
-        .section {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 30px;
-            margin: 40px auto;
-            border-radius: 20px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-            max-width: 800px;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        footer {
-            margin-top: 60px;
-            padding: 20px;
-            background: linear-gradient(135deg, #43A047, #2E7D32);
-            color: white;
-            font-size: 1.1em;
-            animation: fadeIn 3s ease-in-out;
-            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideIn {
-            from { transform: translateY(-20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0); }
-        }
-
-        @keyframes glow {
-            0% { text-shadow: 0 0 5px rgba(46, 125, 50, 0.7); }
-            50% { text-shadow: 0 0 20px rgba(46, 125, 50, 0.9); }
-            100% { text-shadow: 0 0 5px rgba(46, 125, 50, 0.7); }
-        }
-
-        .glow-text {
-            animation: glow 2s ease-in-out infinite;
-        }
-
-        .floating {
-            animation: float 4s ease-in-out infinite;
-        }
-
-        .section h3 {
-            font-size: 1.8em;
-            color: #2E7D32;
-            margin-bottom: 20px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-        }
-
-        .section h4 {
-            font-size: 1.2em;
-            margin: 10px 0;
-            color: #666;
-        }
-
-        /* Параллакс-эффект */
-        .parallax {
-            background: url('https://i.ibb.co/DgzhLB5s/IMG-20250319-124206-962.jpg') no-repeat center center/cover;
-            height: 300px;
-            margin: 40px 0;
-            border-radius: 20px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .parallax::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 20px;
-        }
-
-        nav {
-            margin: 20px 0;
-        }
-
-        nav a {
-            margin: 0 10px;
-            color: #2E7D32;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #388E3C;
-        }
-    </style>
+    <title>Визитка Креатива</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1 class="floating glow-text">Сайт TheCreativshik'a</h1>
-    <nav>
-        <a href="#about">Обо мне</a>
-        <a href="#devices">Мои устройства</a>
-        <a href="#contact">Контакты</a>
-    </nav>
-
-    <div id="about" class="section">
-        <h2>Обо мне</h2>
-        <h3>Я Тимофей, начинающий HTML разработчик-самоучка из России, живу в Санкт-Петербурге.</h3> 
-        <h3>Люблю играть в Minecraft и SimplePlanes</h3>
-        <a href="https://wellboy1228.github.io/kasanemc" class="button-style">Мой любимый сервер: KasaneMC</a>
-        <a href="https://t.me/TheCreativshik" class="button-style">Мой Telegram</a>
-    </div>
+    <div class="background"></div>
     
-    <div class="parallax"></div>
-
-    <div id="devices" class="section">
-        <h2>Мои устройства</h2>
-        <h3>Основной телефон: iPhone X 3/64</h3>
-        <h3>Экспериментальный телефон №1: iPhone SE 2/16 (A1723)</h3>
-        <h3>Экспериментальный телефон №2: Samsung Galaxy Star Plus 0.5/4 (GT-S7262)</h3>
-        <h3>Мой основной ПК:</h3>
-        <h4>Процессор: AMD Ryzen 7 7735H</h4>
-        <h4>Видеокарта: AMD Radeon 680M</h4>
-        <h4>ОЗУ: 16 ГБ LPDDR5 6400МГц</h4>
-        <h4>Накопители: SSD M.2 512 ГБ</h4>
-        <h4>Модель: Xiaomi REDMI Book 14 2025 AMD</h4>
+    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+        <span class="theme-icon">🌙</span>
+    </button>
+    
+    <div class="container">
+        <div class="profile-card">
+            <div class="avatar">
+                <img src="avatar.jpg" alt="TheCreativshik">
+            </div>
+            
+            <h1 class="name">TheCreativshik</h1>
+            <h2 class="real-name">Тимофей</h2>
+            
+            <div class="description">
+                <p>Я - 12-летний энтузиаст. Люблю рок.</p>
+                <p>Любимая игра - Minecraft.</p>
+                <p class="location">📍 Санкт-Петербург</p>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://t.me/TheCreativshikBio" class="social-btn telegram" target="_blank">
+                    <img src="tg.png" alt="Telegram" class="icon-img">
+                    <span class="text">Telegram</span>
+                </a>
+                
+                <a href="https://youtube.com/@TheCreativshik" class="social-btn youtube" target="_blank">
+                    <img src="yt.png" alt="YouTube" class="icon-img">
+                    <span class="text">YouTube</span>
+                </a>
+                
+                <a href="https://discordapp.com/users/1325161604689563783" class="social-btn discord" target="_blank">
+                    <img src="ds.png" alt="Discord" class="icon-img">
+                    <span class="text">Discord</span>
+                </a>
+            </div>
+            
+            <div class="minecraft-info">
+                <img src="mc.png" alt="Minecraft" class="icon-img-mc">
+                <p>Мой ник в Minecraft: <strong>TheCreativshik</strong> (пиратка)</p>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>© TheCreativshik 2026. Прав нет.</p>
+        </footer>
     </div>
-
-    <div id="contact" class="section">
-        <h2>Контакты</h2>
-        <h3>Свяжитесь со мной:</h3>
-        <a href="https://t.me/TheCreativshik" class="button-style">Telegram</a>
-    </div>
-
-    <footer>
-        <h5> (C)TheCreativshik 2026. Сайт Open Source, права не защищены.</h5>
-    </footer>
 </body>
 </html>
-
-
-

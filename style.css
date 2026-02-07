@@ -94,7 +94,7 @@ body.dark-theme .theme-toggle:hover {
 }
 
 .profile-card {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     border-radius: 20px;
@@ -110,7 +110,7 @@ body.dark-theme .theme-toggle:hover {
 }
 
 body.dark-theme .profile-card {
-    background: rgba(20, 20, 20, 0.6);
+    background: rgba(20, 20, 20, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 
                 inset 0 1px 0 rgba(255, 255, 255, 0.1),
@@ -228,6 +228,19 @@ body.dark-theme .location {
     flex: 1;
     min-width: 140px;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -150%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(135deg, transparent 45%, rgba(255, 255, 255, 0.3) 50%, transparent 55%);
+    animation: shineDiagonal 4s infinite;
 }
 
 .social-btn:hover {
@@ -297,6 +310,28 @@ body.dark-theme .discord {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.minecraft-info::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -150%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(135deg, transparent 45%, rgba(255, 255, 255, 0.2) 50%, transparent 55%);
+    animation: shineDiagonal 4s infinite;
+}
+
+@keyframes shineDiagonal {
+    0% {
+        left: -150%;
+    }
+    100% {
+        left: 150%;
+    }
 }
 
 body.dark-theme .minecraft-info {
@@ -305,6 +340,8 @@ body.dark-theme .minecraft-info {
 
 .minecraft-info p {
     margin: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .minecraft-info strong {

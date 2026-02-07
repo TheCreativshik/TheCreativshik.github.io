@@ -322,6 +322,7 @@ body.dark-theme .minecraft-info {
 @media (max-width: 600px) {
     .container {
         padding: 15px;
+        max-width: 100%;
     }
     
     .profile-card {
@@ -334,5 +335,41 @@ body.dark-theme .minecraft-info {
     
     .real-name {
         font-size: 18px;
+    }
+    
+    .social-links {
+        flex-direction: column;
+    }
+    
+    .social-btn {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .theme-toggle {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+        top: 15px;
+        right: 15px;
+    }
+    
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .description {
+        font-size: 14px;
+    }
+    
+    .minecraft-info {
+        font-size: 14px;
+        padding: 15px;
+    }
+    
+    .icon-img-mc {
+        width: 24px;
+        height: 24px;
     }
 }

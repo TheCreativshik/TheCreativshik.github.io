@@ -206,8 +206,8 @@ body.dark-theme .location {
 }
 
 .social-links {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 12px;
     margin-bottom: 20px;
 }
@@ -225,8 +225,6 @@ body.dark-theme .location {
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15),
                 inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    flex: 1;
-    min-width: 140px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     position: relative;
     overflow: hidden;
@@ -295,6 +293,16 @@ body.dark-theme .youtube {
 
 body.dark-theme .discord {
     background: linear-gradient(135deg, #4752c4, #5b6eae);
+}
+
+.itd {
+    background: linear-gradient(135deg, #2c2c2c, #404040);
+    color: white;
+    transition: background 0.3s ease;
+}
+
+body.dark-theme .itd {
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
 }
 
 .minecraft-info {
@@ -388,7 +396,7 @@ body.dark-theme .footer {
     }
     
     .social-links {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
     
     .social-btn {
@@ -396,6 +404,10 @@ body.dark-theme .footer {
         min-width: auto;
         padding: 12px 16px;
         font-size: 15px;
+    }
+    
+    .social-btn:nth-child(4) {
+        margin-top: 0;
     }
     
     .theme-toggle {
